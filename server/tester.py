@@ -19,7 +19,7 @@ def loadSources(sources, problems=False):
                 printToFile(source[1], "/home/test/" + path) #TODO better
 
 def loadProblem(problem):
-    loadSources(problem.rules.sources, True)
+    loadSources(problem.rules.sources, False)
 
 def loadProblemDownloads(problem):
     loadSources(problem.rules.downloads)
