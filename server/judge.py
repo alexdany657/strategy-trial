@@ -30,11 +30,11 @@ def runStrategy(game, gameModule, gameState, playerId: int, strategyModule):
     except subprocess.TimeoutExpired:
         process.kill()
         out, err = process.communicate()
-        result[0] = StrategyVerdict.TimeLimitExceeded # Do not work correctly
+        result[0] = StrategyVerdict.TimeLimitExceeded # do not work correctly
         return result
     if 128 - process.returncode < 0:
         print("Ret code:", process.returncode)
-        return [StrategyVerdict.TimeLimitExceeded]
+        return [StrategyVerdict.TimeLimitExceeded] # or memory. TODO something
     if process.returncode != 0:
         print("Ret code:", process.returncode)
         print(out)

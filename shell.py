@@ -30,6 +30,4 @@ except:
     sys.exit(57)
 print(ans)
 #print("e")
-
 sys.stderr.write("finished\n")
-

@@ -21,4 +21,3 @@ class Turn:
     def fromString(self, s: str) -> None:
         self.r, self.c = map(int, s.split())
         return None
-
